@@ -14,7 +14,7 @@ add_executable(
 )
 
 target_link_libraries(
-    a
+    mashiro
     skia
     libjpeg
     libpng
