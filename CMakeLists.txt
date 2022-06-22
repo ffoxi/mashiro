@@ -9,13 +9,12 @@ include_directories("D:\\msys64\\mingw64\\include\\skia")
 include_directories("D:\\msys64\\mingw64\\include\\skia\\include\\core")
 
 add_executable(
-    MTimeTest
-    MTime.cc
-    MTimeTest.cc
+    mashiro
+    main.cc
 )
 
 target_link_libraries(
-    MTimeTest
+    mashiro
     skia
     libjpeg
     libpng
