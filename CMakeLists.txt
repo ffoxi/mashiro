@@ -3,18 +3,19 @@ project(ddpaint C CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_STANDARD 11)
-set(CMAKE_EXE_LINKER_FLAGS "-mwindows -municode")
+# set(CMAKE_EXE_LINKER_FLAGS "-mwindows -municode")
 
 include_directories("D:\\msys64\\mingw64\\include\\skia")
 include_directories("D:\\msys64\\mingw64\\include\\skia\\include\\core")
 
 add_executable(
-    mashiro
-    src/main.cc
+    MTimeTest
+    MTime.cc
+    MTimeTest.cc
 )
 
 target_link_libraries(
-    mashiro
+    MTimeTest
     skia
     libjpeg
     libpng
