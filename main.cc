@@ -16,33 +16,13 @@ LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
 int main(int argc, char **argv) {
     WNDCLASSEX wc = {
-        sizeof(WNDCLASSEX),
-        CS_CLASSDC,
-        WndProc,
-        0L,
-        0L,
-        GetModuleHandle(nullptr),
-        nullptr,
-        nullptr,
-        nullptr,
-        nullptr,
-        _T("mashiro window class"),
-        nullptr
+        sizeof(WNDCLASSEX), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(nullptr),
+        nullptr, nullptr, nullptr, nullptr, _T("mashiro window class"), nullptr
     };
     ::RegisterClassEx(&wc);
     HWND hwnd = ::CreateWindow(
-        wc.lpszClassName,
-        _T("mashiro"),
-        WS_OVERLAPPEDWINDOW,
-        100,
-        100,
-        800,
-        600,
-        nullptr,
-        nullptr,
-        wc.hInstance,
-        nullptr
-    );
+        wc.lpszClassName, _T("mashiro"), WS_OVERLAPPEDWINDOW,
+        100, 100, 800, 600, nullptr, nullptr, wc.hInstance, nullptr);
     if (hwnd == nullptr) {
         return 0;
     }
